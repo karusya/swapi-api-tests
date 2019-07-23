@@ -11,7 +11,7 @@ npm test
 ```
 
 ## Project Structure
-
+```
 .
     ├── framework
        ├── helper                   # Files
@@ -26,12 +26,12 @@ npm test
     ├── tools                   # Tools and utilities
     ├── package.json
     └── README.md
-
+```
 ## Test Cases
 The tests in this project use [https://swapi.co/](https://swapi.co/) to demonstrate how to interact with some of the most common API calls for films/ and people/ endpoints.
 Test coverage for films/ and people/ endpoints described in [Test cases file](testCases.txt)
 
-## CI 
+## CI
 
 
 ## Reporters
