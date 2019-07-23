@@ -1,0 +1,39 @@
+{
+    "name": "swapi-api-testing",
+    "version": "1.0.0",
+    "description": "StarWars API Testing",
+    "author": "Karyna Zhdanova",
+    "scripts": {
+        "pretest": "rm -rf allure-results/*",
+        "test": "mocha --opts ./framework/helper/mocha.opts",
+        "test-allure": "rm -rf allure-results/* && mocha --opts='./framework/helper/mocha.opts' --reporter mocha-allure-reporter",
+        "validate": "eslint ./test/**/*.js && eslint ./support/**/*.js",
+        "report": "allure generate allure-results --clean -o allure-report && allure open allure-report"
+    },
+    "dependencies": {
+        "body-parser": "^1.17.1",
+        "chai": "^4.2.0",
+        "chai-json-equal": "0.0.1",
+        "chai-json-schema": "^1.5.1",
+        "jsonschema": "^1.2.4",
+        "mocha": "^6.2.0",
+        "request": "2.88.0",
+        "request-promise-native": "1.0.7",
+        "should": "^13.2.3"
+    },
+    "devDependencies": {
+        "allure-commandline": "^2.0.0",
+        "eslint": "^5.16.0",
+        "eslint-config-airbnb-base": "^13.1.0",
+        "eslint-plugin-import": "^2.16.0",
+        "husky": "^1.3.1",
+        "install": "^0.13.0",
+        "mocha-allure-reporter": "^1.4.0",
+        "mocha-eslint": "^4.1.0",
+        "npm": "^6.10.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    }
+}

@@ -1,0 +1,6 @@
+--require ./framework/helper/setup.js
+--slow 2000
+--timeout 20000
+
+test/*.js
+

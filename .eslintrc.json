@@ -1,0 +1,13 @@
+{
+  "extends": "airbnb-base",
+  "env": {
+    "node": true,
+    "mocha": true
+  },
+  "globals": {
+    "describe": true,
+    "before": true,
+    "it": true,
+    "expect": true
+  }
+}

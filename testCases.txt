@@ -1,0 +1,194 @@
+===============================================
+GENERAL HEALTH CHECK
+===============================================
+
+Coverage reason: We need to monitor if API is alive and running
+Test ID: 01
+-----------------------------------------------
+Title: Should get valid endpoints information
+Priority: Critical
+Steps to reproduce:
+* Send request to 'https://swapi.co/api/' endpoint.
+Expected result:
+* Response code is 200.
+* Endpoints information equals expected test data.
+
+Test ID: 02
+-----------------------------------------------
+Title: Should return 404 on invalid endpoint request
+Priority: Critical
+Steps to reproduce:
+* Send request to 'https://swapi.co/api/${invalidEndpoin}' endpoint.
+Expected result:
+* Response code is 404.
+
+===============================================
+JSON Schemas validation
+===============================================
+Coverage reason:
+JSON Schema is a contract for your JSON document, if
+schemas will change - tests should be adjusted.
+
+Test ID: 02
+-----------------------------------------------
+Title: Should get correct JSON schema for people/ endpoint
+Priority: Critical
+Steps to reproduce:
+* Send GET request to 'https://swapi.co/api/people/schema' endpoint.
+Expected result:
+* Response code is 200.
+* Schema should correspond the valid one (could be found framework/jsonSchema/people.json)
+
+Test ID: 03
+-----------------------------------------------
+Title: Should get correct JSON schema for films/ endpoint
+Priority: Critical
+Steps to reproduce:
+* Send request to 'https://swapi.co/api/films/schema' endpoint.
+Expected result:
+* Response code is 200.
+* Endpoints information corresponds to requirements (see framework/jsonSchema/films.json file).
+
+===============================================
+Validation of responce against JSON Schemas
+===============================================
+
+Test ID: 04
+-----------------------------------------------
+Coverage reason:
+Each returned object should correspond expected JSON
+Schema, otherwise - some services that rely on API
+should give misleading results
+
+Title: Should Get Valid responce for people/ endpoint
+Priority: High
+Steps to reproduce:
+* Send request to 'https://swapi.co/api/people' endpoint.
+Expected result:
+* Response code is 200.
+* Endpoints information corresponds to requirements.
+
+Test ID: 05
+-----------------------------------------------
+Title: Should Get Valid responce for films/ endpoint
+Priority: High
+Steps to reproduce:
+* Send request to 'https://swapi.co/api/films' endpoint.
+Expected result:
+* Response code is 200.
+* Endpoints information corresponds to requirements.
+
+===============================================
+Films/ Endpoint Checks
+===============================================
+
+Coverage reason:
+To verify all parameters for films/ endpoints that are described in a documentation
+
+ID: 06
+-----------------------------------------------
+Title: Should Get Valid responce for films/1 - first film request
+Priority: High
+Steps to reproduce:
+* Send request to 'https://swapi.co/api/films/1' endpoint.
+Expected result:
+* Response code is 200.
+* Responce correspond to valid JSON Schema framework/jsonSchema/films.json
+* Endpoints information corresponds to requirements (see /support/testData.js file).
+
+ID: 07
+-----------------------------------------------
+Title: Should Get Valid responce for films/1 - first film request
+Priority: Critical
+Steps to reproduce:
+* Send request to 'https://swapi.co/api/' endpoint.
+Expected result:
+1. Response code is 200.
+2. Endpoints information corresponds to requirements (see /support/testData.js file).
+
+ID: 08
+-----------------------------------------------
+Title: Should Get Valid responce for films/1 - first film request
+Priority: Critical
+Steps to reproduce:
+* Send request to 'https://swapi.co/api/' endpoint.
+Expected result:
+1. Response code is 200.
+2. Endpoints information corresponds to requirements (see /support/testData.js file).
+
+ID: 09
+-----------------------------------------------
+Title: Should Get Valid responce for films/1 - first film request
+Priority: Critical
+Steps to reproduce:
+* Send request to 'https://swapi.co/api/' endpoint.
+Expected result:
+1. Response code is 200.
+2. Endpoints information corresponds to requirements (see /support/testData.js file).
+
+ID: 10
+-----------------------------------------------
+Title: Should Get Valid responce for films/1 - first film request
+Priority: Critical
+Steps to reproduce:
+* Send request to 'https://swapi.co/api/' endpoint.
+Expected result:
+1. Response code is 200.
+2. Endpoints information corresponds to requirements (see /support/testData.js file).
+
+===============================================
+People/ Endpoint Checks
+===============================================
+
+Coverage reason:
+To verify all parameters for people/ endpoint that are described in a documentation
+
+ID: 06
+-----------------------------------------------
+Title: Should Get Valid responce for films/1 - first film request
+Priority: Critical
+Steps to reproduce:
+* Send request to 'https://swapi.co/api/' endpoint.
+Expected result:
+1. Response code is 200.
+2. Endpoints information corresponds to requirements (see /support/testData.js file).
+
+ID: 07
+-----------------------------------------------
+Title: Should Get Valid responce for films/1 - first film request
+Priority: Critical
+Steps to reproduce:
+* Send request to 'https://swapi.co/api/' endpoint.
+Expected result:
+1. Response code is 200.
+2. Endpoints information corresponds to requirements (see /support/testData.js file).
+
+ID: 08
+-----------------------------------------------
+Title: Should Get Valid responce for films/1 - first film request
+Priority: Critical
+Steps to reproduce:
+* Send request to 'https://swapi.co/api/' endpoint.
+Expected result:
+1. Response code is 200.
+2. Endpoints information corresponds to requirements (see /support/testData.js file).
+
+ID: 09
+-----------------------------------------------
+Title: Should Get Valid responce for films/1 - first film request
+Priority: Critical
+Steps to reproduce:
+* Send request to 'https://swapi.co/api/' endpoint.
+Expected result:
+1. Response code is 200.
+2. Endpoints information corresponds to requirements (see /support/testData.js file).
+
+ID: 10
+-----------------------------------------------
+Title: Should Get Valid responce for films/1 - first film request
+Priority: Critical
+Steps to reproduce:
+* Send request to 'https://swapi.co/api/' endpoint.
+Expected result:
+1. Response code is 200.
+2. Endpoints information corresponds to requirements (see /support/testData.js file).
