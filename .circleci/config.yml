@@ -16,7 +16,7 @@ jobs:
             - ./node_modules
       - run:
           name: test
-          command: npm run lint && npm test 
+          command: npm test
       - store_artifacts:
           path: test-results.xml
           prefix: tests
