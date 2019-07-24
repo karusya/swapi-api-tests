@@ -2,7 +2,9 @@
 GENERAL HEALTH CHECK
 ===============================================
 
-Coverage reason: We need to monitor if API is alive and running
+Coverage reason:
+We need to monitor if API is alive and running and
+verifying error codes, to ensure validation of a response
 Test ID: 01
 -----------------------------------------------
 Title: Should get valid endpoints information
@@ -11,7 +13,7 @@ Steps to reproduce:
 * Send request to 'https://swapi.co/api/' endpoint.
 Expected result:
 * Response code is 200.
-* Endpoints information equals expected test data.
+* Endpoints information equals expected test data - endpoints urls in framework/helper/api_urls.js.
 
 Test ID: 02
 -----------------------------------------------
