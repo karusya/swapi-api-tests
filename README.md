@@ -45,3 +45,7 @@ Added simple continuos integration for master branch(need to be adjusted)
 
 ## Reporters
 This projects uses both the [spec-reporter](https://webdriver.io/docs/spec-reporter.html) and [allure-reporter](http://allure.qatools.ru/). The spec reporter offers  feedback when running from terminal and the allure reporter provides you with an html report and screenshots that are automatically attached to failed tests. After running your the tests, run `npm run report` to generate the allure report.
+**NOTE:** Allure report is opening empty in Chome - fix it
+
+![Aluure report example](allure1.png "Example of report")
+![Allure report example](allure2.png "Example of report 2")
