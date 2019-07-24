@@ -2,6 +2,7 @@ const chai = require ('chai');
 const expect = chai.expect;
 chai.use (require ('chai-json-schema'));
 chai.use (require ('chai-json-equal'));
+chai.use(require('chai-match'));
 global.assert = chai.assert;
 global.should = chai.should ();
 global.retryCount = 2;

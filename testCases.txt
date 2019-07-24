@@ -52,23 +52,23 @@ Expected result:
 ===============================================
 Validation of responce against JSON Schemas
 ===============================================
-
-Test ID: 05
------------------------------------------------
 Coverage reason:
 Each returned object should correspond expected JSON
 Schema, otherwise - some services that rely on API
 should give misleading results
 
-Title: Should Get Valid responce for people/ endpoint
+Test ID: 05
+-----------------------------------------------
+
+Title: Should validate people endpoint responce against valid JSON schema
 Priority: High
 Steps to reproduce:
 * Send request to 'https://swapi.co/api/people' endpoint.
 Expected result:
 * Response code is 200.
-* Response should have valid keys for people
+* Response should have schema that correspond the one in framework/jsonSchema/people.json
 
-Test ID: 05
+Test ID: 06
 -----------------------------------------------
 Title: Should Get Valid responce for films/ endpoint
 Priority: High
@@ -76,7 +76,7 @@ Steps to reproduce:
 * Send request to 'https://swapi.co/api/films' endpoint.
 Expected result:
 * Response code is 200.
-* * Response should have valid keys for films
+* Response should have schema that correspond the one in framework/jsonSchema/films.json
 
 ===============================================
 Films/ Endpoint Checks
@@ -84,7 +84,16 @@ Films/ Endpoint Checks
 Coverage reason:
 To verify all parameters for films/ endpoints that are described in a documentation
 
-ID: 06
+Test ID : 07
+Title: Should Get Valid responce for films/ endpoint
+Priority: High
+Steps to reproduce:
+* Send request to 'https://swapi.co/api/films' endpoint.
+Expected result:
+* Response code is 200.
+* Should have valid keys for the object in responce
+
+Test ID: 08
 -----------------------------------------------
 Title: Should Get Valid responce for films/1 - first film request
 Priority: High
@@ -95,7 +104,7 @@ Expected result:
 * Responce correspond to valid JSON Schema framework/jsonSchema/films.json
 * Endpoints information corresponds to requirements (see /support/testData.js file).
 
-ID: 07
+Test ID: 09
 -----------------------------------------------
 Title: Should Get Valid responce for films/?search - jedi
 Priority: High
@@ -105,7 +114,7 @@ Expected result:
 * Response code is 200.
 * Responce data should correspond the one in fixture (film.json) object
 
-ID: 08
+Test ID: 10
 -----------------------------------------------
 Title: Should not have pagination at films endpoint
 Priority: Medium
@@ -123,37 +132,47 @@ People/ Endpoint Checks
 Coverage reason:
 To verify all parameters for people/ endpoint that are described in a documentation
 
-ID: 07
+Test ID : 11
+Title: Should Get Valid responce for people/ endpoint
+Priority: High
+Steps to reproduce:
+* Send request to 'https://swapi.co/api/people' endpoint.
+Expected result:
+* Response code is 200.
+* Should have valid keys for the object in responce
+
+Test ID: 12
 -----------------------------------------------
 Title: People Endpoint should have pagination
-Priority: Critical
+Priority: Medium
 Steps to reproduce:
 * Send request to 'https://swapi.co/api/' endpoint.
 Expected result:
 1. Response code is 200.
 2. Endpoints information corresponds to requirements (see /support/testData.js file).
 
-ID: 08
+
+Test ID: 13
 -----------------------------------------------
 Title: Should Get Valid details for people/1 - search by id
-Priority: Critical
+Priority: High
 Steps to reproduce:
-* Send request to 'https://swapi.co/api/' endpoint.
+* Send request to 'https://swapi.co/api/people/1' endpoint.
 Expected result:
-1. Response code is 200.
-2. Endpoints information corresponds to requirements (see /support/testData.js file).
+* Response code is 200.
+* Responce body has valid keys for films
 
-ID: 09
+Test ID: 14
 -----------------------------------------------
 Title: Should be able to get page=2 of Peoples list
-Priority: Critical
+Priority: Medium
 Steps to reproduce:
-* Send request to 'https://swapi.co/api/' endpoint.
+* Send request to 'https://swapi.co/api/?search=a&page=2' endpoint.
 Expected result:
-1. Response code is 200.
-2. Endpoints information corresponds to requirements (see /support/testData.js file).
+* Response code is 200.
+* Previous/next page correspond to page=1 and page=3
 
-ID: 10
+Test ID: 15
 -----------------------------------------------
 Title: Should Get Valid responce for people search - r2
 Priority: Medium

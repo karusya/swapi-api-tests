@@ -1,4 +1,4 @@
-[{
+{
   "fields": {
       "edited": "2014-12-20T21:17:50.311Z",
       "name": "R2-D2",
@@ -14,4 +14,4 @@
   },
   "model": "resources.people",
   "pk": 3
-}]
+}
