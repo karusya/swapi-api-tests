@@ -31,7 +31,7 @@
         "install": "^0.13.0",
         "mocha-allure-reporter": "^1.4.0",
         "mocha-eslint": "^4.1.0",
-        "npm": "^6.10.1",
+        "npm": "^6.14.6",
         "winston": "^3.2.1"
     },
     "repository": {
